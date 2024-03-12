@@ -1305,7 +1305,7 @@ main {
   z-index: 5;
 }
 .footer {
-  background: var(--bodyBg);
+  background: var(--colorWhite);
   position: relative;
 }
 .tf__footer_content {
@@ -1320,7 +1320,7 @@ main {
   justify-content: center;
   width: 100px;
   height: 100px;
-  background: var(--colorPrimary);
+  background: var(--bgColor);
   border-radius: 50%;
   padding: 20px;
   margin-right: 35px;
@@ -1338,7 +1338,7 @@ main {
 
 .tf__footer_content .text p,
 .tf__footer_content .text a {
-  color: var(--bodyColor);
+  color: var(--bodyBg);
   display: block;
   font-size: 16px;
   font-weight: 400;
@@ -2912,6 +2912,39 @@ h5.preloader-text::after {
   display: block;
   font-size: 14px;
 }
+#robbu-whatsapp-button {
+  background-color: #25D366 !important; /* Cor de fundo verde WhatsApp */
+  border: none !important; /* Remove qualquer borda */
+  padding: 10px; /* Espaçamento interno ao redor do conteúdo do botão */
+  margin: 0 !important; /* Remove margens */
+  display: inline-flex; /* Garante que o botão não ocupe toda a largura disponível */
+  box-shadow: none !important; /* Remove qualquer sombra */
+  align-items: center; /
+}
+
+/* Estilo para o ícone do WhatsApp dentro do botão */
+#robbu-whatsapp-button img {
+  width: 10px; /* Define a largura do ícone */
+  height: 20px; /* Define a altura do ícone */
+  margin-right: 10px; /* Espaçamento à direita do ícone */
+  align-items: center;
+}
+
+/* Estilo para o tooltip do botão do WhatsApp */
+#robbu-whatsapp-button .rwb-tooltip {
+  background-color: #25D366 !important; /* Cor de fundo verde para o tooltip */
+  color: #ffffff !important; /* Cor do texto para o tooltip */
+  border-radius: 4px; /* Bordas arredondadas para o tooltip */
+  padding: 5px 5px; /* Espaçamento interno para o tooltip */
+  font-size: 12px; /* Tamanho da fonte para o tooltip */
+  display: none; /* Esconde o tooltip por padrão; altere conforme necessário */
+}
+
+
+  
+
+/* Caso tenha um ícone verde do WhatsApp em SVG ou PNG, substitua o URL no src da tag img para o seu ícone verde. */
+
 /*==============================
   POPUP END
 ===============================*/
