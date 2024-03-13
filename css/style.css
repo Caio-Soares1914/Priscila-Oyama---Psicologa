@@ -38,6 +38,19 @@ li {
   color: var(--colorWhite);
 }
 
+.progress.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50px)
+
+}
+
+.progress {
+ 
+ right: 36px;
+ 
+}
+
 
 a {
   display: inline-block;
@@ -57,7 +70,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: -10;
+  margin: -1px;
   padding: 0;
   color: var(--colorWhite);
 }
@@ -70,7 +83,7 @@ h7{
 
 p,
 span {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
   margin: 0;
@@ -82,7 +95,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-image: url('../images/testimonial/Fundo.png'); /* Adiciona a imagem de fundo */
-  background-size: contain; /* Faz com que a imagem de fundo cubra todo o espaço disponível */
+  background-size: auto; /* Faz com que a imagem de fundo cubra todo o espaço disponível */
   background-position: center; /* Centraliza a imagem de fundo */
   background-repeat: repeat; /* Evita que a imagem se repita */
 }
@@ -103,7 +116,7 @@ body {
 
 img {
   width: 100% !important;
-  height: 80% !important;
+  height: 100% !important;
   object-fit: cover !important;
   
 }
@@ -895,7 +908,7 @@ b{
 }
 
 .tf__design_text p {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -955,6 +968,20 @@ b{
 
 .tf__design_form form button {
   margin-top: 25px;
+}
+
+.tf__design_form img {
+  max-width: 100%; /* Garante que a imagem seja responsiva */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Para remover espaços indesejados abaixo da imagem */
+  transform: translateX(-80px) translateY(200px); /* Mover 20px para a esquerda e 10px para cima */
+}
+
+/* Correções para o layout em telas pequenas */
+@media (max-width: 991px) {
+  .tf__design_counter, .tf__design_text, .tf__design_form {
+      text-align: center; /* Centraliza o conteúdo em telas menores */
+  }
 }
 
 /* design end */
@@ -2915,7 +2942,7 @@ h5.preloader-text::after {
 #robbu-whatsapp-button {
   background-color: #25D366 !important; /* Cor de fundo verde WhatsApp */
   border: none !important; /* Remove qualquer borda */
-  padding: 10px; /* Espaçamento interno ao redor do conteúdo do botão */
+  padding: 5px; /* Espaçamento interno ao redor do conteúdo do botão */
   margin: 0 !important; /* Remove margens */
   display: inline-flex; /* Garante que o botão não ocupe toda a largura disponível */
   box-shadow: none !important; /* Remove qualquer sombra */
@@ -2926,7 +2953,7 @@ h5.preloader-text::after {
 #robbu-whatsapp-button img {
   width: 10px; /* Define a largura do ícone */
   height: 20px; /* Define a altura do ícone */
-  margin-right: 10px; /* Espaçamento à direita do ícone */
+  margin-right: px; /* Espaçamento à direita do ícone */
   align-items: center;
 }
 
