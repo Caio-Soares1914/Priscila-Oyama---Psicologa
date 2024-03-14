@@ -644,6 +644,9 @@ button {
   background-size: cover !important;
   height: 100vh;
   padding-top: 200px;
+  background-size: cover; /* Garante que a imagem de fundo cubra a área total da div */
+  background-position: center; /* Centraliza a imagem de fundo */
+  color: #fff; /* Cor do texto */
 }
 
 .tf__banner div {
@@ -2980,9 +2983,19 @@ h5.preloader-text::after {
   font-size: 12px; /* Tamanho da fonte para o tooltip */
   display: none; /* Esconde o tooltip por padrão; altere conforme necessário */
 }
+.container a {
+  margin: 10px;
+  color: #561C24; /* Altera para a cor que desejar */
+  font-size: 54px; /* Tamanho do ícone */
+}
 
+.container a:hover {
+  color: #ccc; /* Cor ao passar o mouse */
+}
+h8{
+  color: #131313;
+}
 
-  
 
 /* Caso tenha um ícone verde do WhatsApp em SVG ou PNG, substitua o URL no src da tag img para o seu ícone verde. */
 
