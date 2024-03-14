@@ -79,12 +79,14 @@ h7{
   margin: -10;
   padding: 0;
   color: var(--colorWhite);
+  font-size: 23px;
+  font-weight: 500;
 }
 
 p,
 span {
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.7;
   margin: 0;
   color: var(--bodyBg);
@@ -94,7 +96,7 @@ span {
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-image: url('../images/testimonial/Fundo.png'); /* Adiciona a imagem de fundo */
+  background-image: url('../images/testimonial/Fundo2.png'); /* Adiciona a imagem de fundo */
   background-size: auto; /* Faz com que a imagem de fundo cubra todo o espaço disponível */
   background-position: center; /* Centraliza a imagem de fundo */
   background-repeat: repeat; /* Evita que a imagem se repita */
@@ -690,9 +692,8 @@ b{
 } */
 
 .tf__banner_text p {
-  font-weight: inherit;
+  font-weight: 500;
   margin-bottom: 380px;
-  font-size: 5.0 em; /* Ajuste o valor conforme necessário */
   
   
 }
@@ -765,31 +766,43 @@ b{
 /* banner end */
 
 /* service start */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .tf__single_service {
   padding: 0px 40px 10px 40px !important;
   position: relative;
-  border: 3px solid #191919;
+  border: 4px solid #191919;
   margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribui o espaço internamente */
+  height: 100%; /* Assegura que o serviço ocupe toda a altura do flex container */
 }
 
-.tf__single_service span {
-  display: block;
+/* Assegura que o conteúdo dentro do serviço expanda para ocupar o espaço disponível, se necessário */
+.tf__single_service > p {
+  flex-grow: 1;
   text-align: center;
-  margin: 0 auto;
-  position: relative;
-  top: -46px;
-  width: 100px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 28px;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .tf__single_service h2 {
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: auto;
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
-  top: -50px;
+  margin-top: 20px;
+  width: 100%;
  
 }
 
@@ -799,7 +812,8 @@ b{
   font-weight: 500;
   line-height: 28px;
   position: relative;
-  top: -90px;
+  top: 50px;
+  width: 100%;
 }
 
 /* service end */
@@ -974,7 +988,7 @@ b{
   max-width: 100%; /* Garante que a imagem seja responsiva */
   height: auto; /* Mantém a proporção da imagem */
   display: block; /* Para remover espaços indesejados abaixo da imagem */
-  transform: translateX(-80px) translateY(200px); /* Mover 20px para a esquerda e 10px para cima */
+  transform: translateX(-10px) translateY(0px); /* Mover 20px para a esquerda e 10px para cima */
 }
 
 /* Correções para o layout em telas pequenas */
