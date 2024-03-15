@@ -119,9 +119,25 @@ body {
 img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
-  
+  object-fit: contain; /* Garante que toda a imagem seja visível */
 }
+
+.assinatura-imagem {
+  width: 30px; /* Ajustável conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-left: -10px; /* Espaçamento à direita do botão WhatsApp */
+  transition: transform 0.2s ease; /* Suaviza a transição de movimento */
+}
+
+/* Classe para posicionar a imagem em diferentes locais */
+.posicao .assinatura-imagem {
+  width: 30px; /* Ajustável conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  position: relative; /* Permite movimentação relativa ao contêiner pai */
+  left: 60px; /* Ajuste horizontal, mantenha como 0 se a posição inicial estiver correta */
+  top: -100px; /* Ajuste vertical para mover a imagem para cima */
+}
+
 
 input,
 textarea {
@@ -2956,22 +2972,37 @@ h5.preloader-text::after {
   display: block;
   font-size: 14px;
 }
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 #robbu-whatsapp-button {
   background-color: #25D366 !important; /* Cor de fundo verde WhatsApp */
   border: none !important; /* Remove qualquer borda */
-  padding: 5px; /* Espaçamento interno ao redor do conteúdo do botão */
+  padding: 15px; /* Ajusta o espaçamento interno para uniformizar */
   margin: 0 !important; /* Remove margens */
   display: inline-flex; /* Garante que o botão não ocupe toda a largura disponível */
   box-shadow: none !important; /* Remove qualquer sombra */
-  align-items: center; /
+  align-items: center; /* Alinha itens ao centro verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  animation: pulsate 1.5s infinite ease-in-out; /* Adiciona animação de pulsação */
+  width: auto; /* Define a largura para auto para ajustar ao conteúdo */
+  height: auto; /* Define a altura para auto para ajustar ao conteúdo */
 }
 
 /* Estilo para o ícone do WhatsApp dentro do botão */
 #robbu-whatsapp-button img {
-  width: 10px; /* Define a largura do ícone */
-  height: 20px; /* Define a altura do ícone */
-  margin-right: px; /* Espaçamento à direita do ícone */
-  align-items: center;
+  width: 16px; /* Reduz a largura do ícone para garantir mais espaço verde ao redor */
+  height: 16px; /* Ajusta a altura do ícone para combinar com a nova largura */
+  margin-right: 0; /* Espaçamento à direita do ícone */
 }
 
 /* Estilo para o tooltip do botão do WhatsApp */
@@ -2981,17 +3012,77 @@ h5.preloader-text::after {
   border-radius: 4px; /* Bordas arredondadas para o tooltip */
   padding: 5px 5px; /* Espaçamento interno para o tooltip */
   font-size: 12px; /* Tamanho da fonte para o tooltip */
-  display: none; /* Esconde o tooltip por padrão; altere conforme necessário */
+  display: none; /* Esconde o tooltip por padrão */
 }
+
+
 .container a {
   margin: 10px;
-  color: #561C24; /* Altera para a cor que desejar */
-  font-size: 54px; /* Tamanho do ícone */
+  color: #561C24; /* Cor original, pode ser sobrescrita */
+  font-size: 54px; /* Tamanho original do ícone, pode ser sobrescrito */
 }
 
 .container a:hover {
   color: #ccc; /* Cor ao passar o mouse */
 }
+
+.container .unique-whatsapp-button {
+  display: inline-block;
+  background-color: #561C24; /* Cor alterada do verde do WhatsApp para a cor desejada */
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px !important; /* Tamanho da fonte ajustado conforme necessário */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  top: -250px; /* Ajuste conforme necessário */
+  right: -155px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
+}
+
+.container .unique-whatsapp-button:hover, .container .unique-whatsapp-button:focus {
+  background-color: #1ebe5f; /* Um verde um pouco mais claro */
+  transform: translateY(-5px); /* Move o botão para cima */
+  box-shadow: 0 4px 8px rgba(221, 217, 217, 0.3); /* Sombreamento mais acentuado */
+}
+
+.container .unique-whatsapp-button i {
+  margin-left: 5px; /* Espaçamento entre o texto e o ícone */
+}
+
+.container .unica-whatsapp-button {
+  display: inline-block;
+  background-color: #561C24; /* Cor alterada do verde do WhatsApp para a cor desejada */
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px !important; /* Tamanho da fonte ajustado conforme necessário */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  top: -70px; /* Ajuste conforme necessário */
+  right: -10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
+}
+
+.container .unica-whatsapp-button:hover, .container .unica-whatsapp-button:focus {
+  background-color: #1ebe5f; /* Um verde um pouco mais claro */
+  transform: translateY(-5px); /* Move o botão para cima */
+  box-shadow: 0 4px 8px rgba(221, 217, 217, 0.3); /* Sombreamento mais acentuado */
+}
+
+.container .unica-whatsapp-button i {
+  margin-left: 5px; /* Espaçamento entre o texto e o ícone */
+}
+
+
+
+
 h8{
   color: #131313;
 }
