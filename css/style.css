@@ -117,7 +117,7 @@ body {
 
 
 img {
-  width: 100% !important;
+  width: 100%;  
   height: 100% !important;
   object-fit: contain; /* Garante que toda a imagem seja visível */
 }
@@ -130,12 +130,12 @@ img {
 }
 
 /* Classe para posicionar a imagem em diferentes locais */
-.posicao .assinatura-imagem {
+.assinatura-imagem {
   width: 30px; /* Ajustável conforme necessário */
   height: auto; /* Mantém a proporção da imagem */
   position: relative; /* Permite movimentação relativa ao contêiner pai */
   left: 60px; /* Ajuste horizontal, mantenha como 0 se a posição inicial estiver correta */
-  top: -100px; /* Ajuste vertical para mover a imagem para cima */
+  top: -130px; /* Ajuste vertical para mover a imagem para cima */
 }
 
 
@@ -787,11 +787,15 @@ b{
 /* service start */
 .row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: row;
+  align-items: stretch;
+
 }
 
 .tf__single_service {
-  padding: 0px 40px 10px 40px !important;
+  padding: 0px 50px 10px 40px !important;
   position: relative;
   border: 4px solid #191919;
   margin-top: 80px;
@@ -814,7 +818,7 @@ b{
 
 .tf__single_service h2 {
   font-size: 23px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   margin-bottom: auto;
   text-transform: uppercase;
@@ -3064,7 +3068,7 @@ h5.preloader-text::after {
   font-size: 20px !important; /* Tamanho da fonte ajustado conforme necessário */
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  top: -70px; /* Ajuste conforme necessário */
+  top: -120px; /* Ajuste conforme necessário */
   right: -10px;
   margin-top: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
@@ -3080,6 +3084,9 @@ h5.preloader-text::after {
   margin-left: 5px; /* Espaçamento entre o texto e o ícone */
 }
 
+.assinatura-pequena {
+  width: 100px; /* ou qualquer outro valor que deseje */
+}
 
 
 
