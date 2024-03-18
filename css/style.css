@@ -71,7 +71,7 @@ h4,
 h5,
 h6 {
   margin: -1px;
-  padding: 0;
+  padding: 10px;
   color: var(--colorWhite);
 }
 
@@ -83,6 +83,14 @@ h7{
   font-weight: 500;
 }
 
+
+h9{
+  margin: -10;
+  padding: 0;
+  color: var(--colorBlack);
+  font-size: 23px;
+  font-weight: 500;
+}
 p,
 span {
   font-size: 16px;
@@ -3094,7 +3102,38 @@ h8{
   color: #131313;
 }
 
+.container .unicoins-whatsapp-button {
+  display: inline-block;
+  background-color: #561C24; /* Cor alterada do verde do WhatsApp para a cor desejada */
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px !important; /* Tamanho da fonte ajustado conforme necessário */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  top: -10px; /* Ajuste conforme necessário */
+  right: -10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
+}
 
+.container .unicoins-whatsapp-button:hover, .container .unica-whatsapp-button:focus {
+  background-color: #1ebe5f; /* Um verde um pouco mais claro */
+  transform: translateY(-5px); /* Move o botão para cima */
+  box-shadow: 0 4px 8px rgba(221, 217, 217, 0.3); /* Sombreamento mais acentuado */
+}
+
+.container .unicoins-whatsapp-button i {
+  margin-left: 5px; /* Espaçamento entre o texto e o ícone */
+}
+
+
+h8{
+  color: #131313;
+
+}
 /* Caso tenha um ícone verde do WhatsApp em SVG ou PNG, substitua o URL no src da tag img para o seu ícone verde. */
 
 /*==============================
