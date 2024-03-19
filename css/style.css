@@ -91,12 +91,25 @@ h9{
   font-size: 23px;
   font-weight: 500;
 }
+
+
+  .section-title {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    width: 100%; /* Garante que o elemento ocupe a largura total do contêiner */
+    font-size: 35px; /* Tamanho da fonte */
+    color: #561C24; /* Cor da fonte */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove paddings padrão */
+  }
+
+  
+
 p,
 span {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.7;
-  margin: 0;
+  margin: -20px;
   color: var(--bodyBg);
 }
 
@@ -696,6 +709,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.2;
+  margin-left: -35px;
 }
 .tf__banner_text h1 span {
   color: var(--colorPrimary);
