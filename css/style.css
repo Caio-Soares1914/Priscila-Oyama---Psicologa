@@ -70,7 +70,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: -1px;
+  margin: 0px;
   padding: 10px;
   color: var(--colorWhite);
 }
@@ -98,9 +98,11 @@ h9{
     width: 100%; /* Garante que o elemento ocupe a largura total do contêiner */
     font-size: 35px; /* Tamanho da fonte */
     color: #561C24; /* Cor da fonte */
-    margin: 0; /* Remove margens padrão */
+    margin: 10px; /* Remove margens padrão */
     padding: 0; /* Remove paddings padrão */
+    
   }
+
 
   
 
@@ -109,7 +111,7 @@ span {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.7;
-  margin: -20px;
+  margin: 0px;
   color: var(--bodyBg);
 }
 
@@ -155,8 +157,8 @@ img {
   width: 30px; /* Ajustável conforme necessário */
   height: auto; /* Mantém a proporção da imagem */
   position: relative; /* Permite movimentação relativa ao contêiner pai */
-  left: 60px; /* Ajuste horizontal, mantenha como 0 se a posição inicial estiver correta */
-  top: -130px; /* Ajuste vertical para mover a imagem para cima */
+  left: 24px; /* Ajuste horizontal, mantenha como 0 se a posição inicial estiver correta */
+  top: -107px; /* Ajuste vertical para mover a imagem para cima */
 }
 
 
@@ -634,12 +636,16 @@ button {
 
 /* for small device start */
 .navbar-toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   line-height: 40px;
   text-align: center;
   background: var(--colorPrimary);
   padding: 0;
+  padding-top: 0px;
   font-size: 16px;
   margin-right: 12px;
   transition: all linear 0.3s;
@@ -669,6 +675,45 @@ button {
 .tf__main_menu .navbar-brand {
   margin-left: 12px;
 }
+
+/* Ajuste do Logo na Barra de Navegação */
+/* Estilos Gerais */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.img-fullsize {
+  max-height: 300px; /* Altura máxima para desktops */
+  max-width: 200%; /* Mantém a proporção da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  width: auto; /* Ajusta automaticamente a largura baseando-se na altura */
+  padding-top: 30px;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 992px) {
+  .navbar-brand {
+      margin-top: -250px; /* Remove a margem extra no topo para dispositivos móveis */
+      margin-left: 0px;
+    }
+
+  .img-fullsize {
+      max-height: 400px; /* Reduz a altura máxima do logo para dispositivos menores */
+      margin-top: -93px;
+      margin-left: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+  .img-fullsize {
+      max-height: 300px; /* Reduz ainda mais para telas muito pequenas, como telefones em modo retrato */
+  }
+}
+
+
 
 /* for small device end */
 
@@ -709,7 +754,8 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.2;
-  margin-left: -35px;
+  margin-left: -0px;
+  margin-top: 0px;
 }
 .tf__banner_text h1 span {
   color: var(--colorPrimary);
@@ -809,7 +855,7 @@ b{
 /* service start */
 .row {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
   align-items: stretch;
@@ -835,7 +881,7 @@ b{
   font-weight: 500;
   line-height: 28px;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 20px;
 }
 
 .tf__single_service h2 {
@@ -856,8 +902,6 @@ b{
   font-size: 17px;
   font-weight: 500;
   line-height: 28px;
-  position: relative;
-  top: 50px;
   width: 100%;
 }
 
@@ -1037,7 +1081,7 @@ b{
 }
 
 /* Correções para o layout em telas pequenas */
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .tf__design_counter, .tf__design_text, .tf__design_form {
       text-align: center; /* Centraliza o conteúdo em telas menores */
   }
@@ -3044,12 +3088,12 @@ h5.preloader-text::after {
 
 .container a {
   margin: 10px;
-  color: #561C24; /* Cor original, pode ser sobrescrita */
+  color: #C7BFBD; /* Cor original, pode ser sobrescrita */
   font-size: 54px; /* Tamanho original do ícone, pode ser sobrescrito */
 }
 
 .container a:hover {
-  color: #ccc; /* Cor ao passar o mouse */
+  color: #561C24; /* Cor ao passar o mouse */
 }
 
 .container .unique-whatsapp-button {
@@ -3090,7 +3134,7 @@ h5.preloader-text::after {
   font-size: 20px !important; /* Tamanho da fonte ajustado conforme necessário */
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  top: -120px; /* Ajuste conforme necessário */
+  top: -91px; /* Ajuste conforme necessário */
   right: -10px;
   margin-top: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
@@ -3142,6 +3186,9 @@ h8{
 .container .unicoins-whatsapp-button i {
   margin-left: 5px; /* Espaçamento entre o texto e o ícone */
 }
+
+
+
 
 
 h8{
