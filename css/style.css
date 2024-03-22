@@ -141,8 +141,17 @@ body {
 
 img {
   width: 100%;  
-  height: 100% !important;
-  object-fit: contain; /* Garante que toda a imagem seja visível */
+ 
+}
+
+.custom-img {
+  max-width: 100%; /* Ajusta a largura máxima da imagem para 100% do contêiner */
+  height: auto; /* Mantém a proporção da altura automática em relação à largura */
+  display: block; /* Faz a imagem ser exibida como um bloco, permitindo o uso de margin auto */
+  margin-top: -70px; /* Centraliza verticalmente se usado dentro de um flex container, ou ajusta o espaço superior */
+  margin-bottom: auto; /* Ajusta o espaço inferior */
+  margin-left: auto; /* Centraliza horizontalmente a imagem no contêiner */
+  margin-right: auto; /* Centraliza horizontalmente a imagem no contêiner */
 }
 
 .assinatura-imagem {
@@ -824,21 +833,7 @@ b{
   z-index: 1;
 }
 
-.tf__banner_img .img::after {
-  position: absolute;
-  content: "";
-  background: url(../images/shapes/banner_shape1.png);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 110%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  animation: bannerAnimi1 linear 1s infinite alternate;
-  -webkit-animation: bannerAnimi1 linear 1s infinite alternate;
-}
+
 
 @keyframes bannerAnimi1 {
   from {
