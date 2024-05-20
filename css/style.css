@@ -147,11 +147,12 @@ img {
 .custom-img {
   max-width: 100%; /* Ajusta a largura máxima da imagem para 100% do contêiner */
   height: auto; /* Mantém a proporção da altura automática em relação à largura */
-  display: block; /* Faz a imagem ser exibida como um bloco, permitindo o uso de margin auto */
-  margin-top: -70px; /* Centraliza verticalmente se usado dentro de um flex container, ou ajusta o espaço superior */
-  margin-bottom: auto; /* Ajusta o espaço inferior */
-  margin-left: auto; /* Centraliza horizontalmente a imagem no contêiner */
-  margin-right: auto; /* Centraliza horizontalmente a imagem no contêiner */
+}
+@media (max-width: 768px) {
+  .custom-img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .assinatura-imagem {
@@ -721,7 +722,10 @@ button {
       max-height: 300px; /* Reduz ainda mais para telas muito pequenas, como telefones em modo retrato */
   }
 }
-
+.crp {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 
 /* for small device end */
@@ -729,19 +733,25 @@ button {
 /* menu end */
 
 /* banner start */
-.tf__banner {
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  height: 100vh;
-  padding-top: 200px;
-  background-size: cover; /* Garante que a imagem de fundo cubra a área total da div */
-  background-position: center; /* Centraliza a imagem de fundo */
-  color: #fff; /* Cor do texto */
+@media only screen and (max-width: 768px) {
+  .tf__banner {
+    /* Assegure que a imagem de fundo fique contida e centralizada na tela */
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
 }
-
 .tf__banner div {
   height: 100%;
+}
+.tf__banner .tf__banner_img {
+  text-align: center; /* Centraliza a imagem do conteúdo */
+}
+
+.tf__banner .tf__banner_img img {
+  width: 80%; /* Ajuste a largura para ser uma porcentagem da tela, como 80% */
+  height: auto; /* Mantenha a altura automática para manter as proporções */
+  margin: 0 auto; /* Margem automática para centralizar horizontalmente */
 }
 
 .tf__banner_text {
@@ -769,6 +779,57 @@ button {
 .tf__banner_text h1 span {
   color: var(--colorPrimary);
 }
+
+.tf__banner h1, .tf__banner p, .tf__banner  {
+  font-size: ajuste-conforme-necessário; /* Diminua o tamanho da fonte para que caibam melhor */
+  margin-top: 20px; /* Adicione margem no topo se necessário */
+  margin-bottom: 5px; /* Reduza a margem inferior para economizar espaço */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Ajuste o espaçamento do contêiner do texto rotativo */
+  .cd-headline {
+    text-align: center;
+    font-size: ajuste-conforme-necessário; /* Ajuste o tamanho da fonte do texto rotativo */
+    margin-top: 10px; /* Ajuste a margem superior para posicionar corretamente */
+    margin-bottom: 10px; /* Ajuste a margem inferior para garantir espaço abaixo do texto rotativo */
+  }
+
+  .cd-words-wrapper {
+    display: inline-block; /* Garante que cada item rotativo seja tratado como um bloco inline */
+    margin: 0 auto; /* Centraliza os itens rotativos */
+  }
+
+  .cd-words-wrapper b {
+    display: block; /* Os elementos 'b' devem ocupar sua própria linha */
+    margin-bottom: 50px; /* Espaçamento entre as linhas de texto rotativo */
+    font-size: 20px; /* Tamanho da fonte adequado para a visualização em dispositivos móveis */
+  }
+
+  /* Ajuste de tamanho de fonte geral, se necessário */
+  h1, .crp {
+    font-size: 10px; /* Diminua o tamanho da fonte se ainda estiver sobrepondo */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 b{
   font-size: 30px;
@@ -3091,21 +3152,11 @@ h5.preloader-text::after {
   color: #561C24; /* Cor ao passar o mouse */
 }
 
-.container .unique-whatsapp-button {
-  display: inline-block;
-  background-color: #561C24; /* Cor alterada do verde do WhatsApp para a cor desejada */
-  color: white !important;
-  padding: 12px 24px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 25px !important; /* Tamanho da fonte ajustado conforme necessário */
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  top: -250px; /* Ajuste conforme necessário */
-  right: -155px;
-  margin-top: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
+.unique-whatsapp-button {
+  display: block; /* Faça o botão ocupar a linha inteira */
+  margin: 10px auto; /* Adicione margem acima e abaixo para mais espaço */
+  text-align: center;
+  background-color: #561C24;
 }
 
 .container .unique-whatsapp-button:hover, .container .unique-whatsapp-button:focus {
@@ -3182,16 +3233,307 @@ h8{
   margin-left: 5px; /* Espaçamento entre o texto e o ícone */
 }
 
-
-
-
-
 h8{
   color: #131313;
 
 }
-/* Caso tenha um ícone verde do WhatsApp em SVG ou PNG, substitua o URL no src da tag img para o seu ícone verde. */
+@media only screen and (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #8C7C6D; /* Ou a cor de fundo que preferir */
+    overflow-y: auto; /* Para permitir rolagem se o menu for longo */
+  }
 
-/*==============================
-  POPUP END
-===============================*/
+  .navbar-toggler {
+    display: block; /* Garante que o toggler esteja visível em dispositivos móveis */
+  }
+
+  .navbar-toggler.collapsed .close_icon {
+    display: none; /* Esconde o ícone 'fechar' quando o menu está colapsado */
+  }
+
+  .navbar-toggler.collapsed .bar_icon {
+    display: top; /* Mostra o ícone 'barras' quando o menu está colapsado */
+  }
+
+  .navbar-nav {
+    display: flex; /* Estiliza os itens do menu para serem mais amigáveis ao toque */
+    flex-direction: column; /* Organiza os itens do menu em coluna */
+  }
+
+  .nav-item {
+    border-bottom: 1px solid #561C24; /* Adiciona uma borda para separar os itens do menu */
+  }
+
+  .nav-link {
+    padding: 10px 15px; /* Adiciona um pouco de preenchimento para facilitar o toque */
+  }
+  @media only screen and (max-width: 991px) {
+    /* Assumindo que '.main_menu' é a classe da barra vinho */
+    .main_menu {
+      position: relative; /* Define a posição relativa para a barra, permitindo posicionamento absoluto do filho */
+    }
+  
+    .navbar-toggler {
+      position: absolute; /* Posicionamento absoluto do toggler dentro da barra */
+      top: 50%; /* Move 50% para baixo, a partir do topo da barra */
+      right: 1rem; /* Espaçamento do lado direito, ajuste conforme necessário */
+      transform: translateY(-50%); /* Desloca o toggler para cima por metade de sua própria altura para centralizá-lo verticalmente */
+      display: block; /* Garante que o toggler esteja visível */
+    }
+  }
+  .faq-section .faq-item {
+    border: 3px solid #561c24;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .faq-section .faq-question {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #561c24;
+  }
+  
+  
+  .faq-section .faq-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-section .faq-answer {
+    display: none;
+    margin-top: 2px;
+    margin-right:10px;
+    font-size: 16px;
+    padding: 15px;
+    padding-top: 1px;
+    padding-left: 30px;
+  }
+  
+  .faq-section .faq-item:hover {
+    background-color: #561c2442;
+  }
+  
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+  }
+  
+  @media only screen and (max-width: 768px) { /* Ajustes para dispositivos móveis */
+    .container, .row, .col-lg-7, .col-lg-5 {
+        padding: 0 15px; /* Adiciona espaçamento nas laterais */
+    }
+
+    h1, h2, h3, p {
+        font-size: maior; /* Aumenta o tamanho da fonte se necessário */
+    }
+  }
+
+
+  .header-nav { 
+    background:#ffffff; 
+    width:100%; 
+    float:left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .navbar {
+    width: 100%;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  }
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+  }
+  .navbar .menu-items {
+    display: flex;
+  }
+  .navbar .nav-container li {
+    list-style: none;
+  }
+  .navbar .nav-container a {
+    text-decoration: none;
+    color: #0e2431;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+  .navbar .nav-container a:hover{
+      font-weight: bolder;
+  }
+  .nav-container {
+    display: block;
+    position: relative;
+    height: 70px;
+  }
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 23px;
+    right: 5%;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 23px;
+    right: 5%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .navbar .menu-items {
+    padding-top: 120px;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+  }
+  .navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .logo {
+    position: absolute;
+    top: 12px;
+    left: 5%;
+    font-size: 1em;
+    color: #0e2431;
+    z-index:2;
+  }
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  .navbar {
+    z-index: 2050; /* Um valor alto para garantir que fique no topo */
+  }
+  .main_menu_bg {
+    padding-top: 10px; /* Adiciona espaço no topo do menu */
+    padding-bottom: 10px; /* Adiciona espaço abaixo do menu */
+  }
+  body {
+    padding-top: 0px; /* Ajuste conforme a altura do seu navbar */
+  }
+  @media (max-width: 768px) {
+    .navbar {
+      z-index: 1050;
+    }
+    .main_menu_bg {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    body {
+      padding-top: 0px;
+    }
+  }
+  .navbar-toggler {
+    margin-right: 0; /* Ajusta o alinhamento do toggler se necessário */
+  }
+  #navbarNav {
+    z-index: 1050 !important;
+  }
+  .unique-whatsapp-button {
+    font-size: 1em; /* Tamanho padrão do texto */
+    padding: 8px 20px; /* Preenchimento ao redor do texto */
+    /* Outros estilos do botão */
+  }
+  
+  /* Media query para telas de até 600px de largura */
+  @media (max-width: 600px) {
+    .unique-whatsapp-button {
+      font-size: 0.8em; /* Reduzir o tamanho do texto */
+      padding: 0px 0px; /* Reduzir o preenchimento ao redor do texto */
+      /* Você pode adicionar outros ajustes de estilo aqui se necessário */
+    }
+  }
+  @media (max-width: 600px) {
+    .unique-whatsapp-button {
+      font-size: 0.8em !important;
+      padding: 5px 10px !important;
+    }
+  }
+  .botao-whatsapp {
+    display: flex;
+    align-items: center;
+    margin-top: 40px; /* Ajuste conforme necessário */
+  }
+  
+  .assinatura-imagem {
+    width: 300px; /* ou outro valor conforme necessário */
+  }  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+    }
+    .tf__banner_text h1 {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-nav {
+      font-size: 14px;
+    }
+    .tf__banner_text p {
+      font-size: 12px;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+
+  
+
+  
+}
